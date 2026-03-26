@@ -34,27 +34,27 @@ public class DataLoader {
                 .name("Lavande")
                 .description("Floral aperitif with lavender and chamomile")
                 .category("floral")
-                .imageUrl("/lavanda.jpg")
+                .imageUrl("/cart_1.jpg")
                 .build());
 
         productRepository.save(Product.builder()
                 .name("Primavera")
                 .description("Bright citrus aperitif")
                 .category("citrus")
-                .imageUrl("/primavera.jpg")
+                .imageUrl("/cart_2.jpg")
                 .build());
 
         productRepository.save(Product.builder()
                 .name("Spezia")
                 .description("Spiced aperitif with cinnamon")
                 .category("spiced")
-                .imageUrl("/spezia.jpg")
+                .imageUrl("/cart_3.jpg")
                 .build());
 
         // FOUNDER
         founderRepository.save(Founder.builder()
                 .name("Mike Vera")
-                .imageUrl("/founder.jpg")
+                .imageUrl("/bg_4.jpg")
                 .build());
 
         // COMPANY INFO
@@ -64,17 +64,40 @@ public class DataLoader {
                 .email("hello@figma.com")
                 .build());
 
-        // AWARDS
         awardRepository.save(Award.builder()
-                .year(2005)
+                .year(2025)
                 .title("Best Botanical Blend")
                 .build());
 
         awardRepository.save(Award.builder()
-                .year(2006)
-                .title("Gold Medal")
+                .year(2025)
+                .title("Gold Medal – Bittersweet Category")
                 .build());
 
+        awardRepository.save(Award.builder()
+                .year(2024)
+                .title("Best Sustainable Packaging")
+                .build());
+
+        awardRepository.save(Award.builder()
+                .year(2024)
+                .title("Eco-Friendly Brand of the Year")
+                .build());
+
+        awardRepository.save(Award.builder()
+                .year(2023)
+                .title("Editor's Choice – Best Aperitif")
+                .build());
+
+        awardRepository.save(Award.builder()
+                .year(2023)
+                .title("Most Elegant Bottle Design")
+                .build());
+
+        awardRepository.save(Award.builder()
+                .year(2022)
+                .title("Best Low & No Alcohol Beverage")
+                .build());
         // STOCKISTS
         stockistRepository.save(Stockist.builder()
                 .region("USA")
@@ -88,6 +111,12 @@ public class DataLoader {
                 .companyName("La Maison du Goût")
                 .email("hello@figma.com")
                 .phone("+33 1 23 45 67 89")
+                .build());
+        stockistRepository.save(Stockist.builder()
+                .region("Asia")
+                .companyName("Kurasu & Co.")
+                .email("hello@figma.com")
+                .phone("+81 3 1234 5678")
                 .build());
 
         System.out.println("✅ Data inserted successfully!");
