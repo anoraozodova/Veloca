@@ -1,10 +1,9 @@
 spring:
   datasource:
-    url: jdbc:postgresql://host:5432/veloce_h2y0
+    url: jdbc:postgresql://localhost:5432/veloce_db
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
-
   jpa:
     hibernate:
       ddl-auto: update
