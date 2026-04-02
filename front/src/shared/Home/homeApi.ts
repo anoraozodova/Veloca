@@ -8,6 +8,7 @@ export interface Product {
 
 export interface HomeResponse {
   heroText: string
+  description: string
   featuredProduct: Product
   products: Product[]
 }
@@ -22,36 +23,51 @@ export type HomeHeroPayload = {
   aboutButtonLink: string
 }
 
-const API_URL = 'http://localhost:8080/api'
-
-export const getHomeData = async (): Promise<HomeResponse | null> => {
-  try {
-    const response = await fetch(`${API_URL}/home`)
-    if (!response.ok) return null
-    return await response.json()
-  } catch (error) {
-    console.error('Error fetching home data:', error)
-    return null
-  }
+// 🔹 МОК ДАННЫЕ ВМЕСТО API
+export const getHomeData = async (): Promise<HomeResponse> => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        heroText: "The only SPIRIT-FREE aperitif that tastes as good as it makes you feel.",
+        description: "Mock description",
+        featuredProduct: {
+          id: 1,
+          name: "Primavera",
+          description: "A delicate and floral aperitif with notes of lavender and chamomile.",
+          category: "Drinks",
+          imageUrl: "/bg_1.jpg",
+        },
+        products: [
+          {
+            id: 1,
+            name: "Veloce Classic",
+            description: "A delicate and floral aperitif with notes of lavender and chamomile.",
+            category: "Drinks",
+            imageUrl: "/product1.jpg",
+          },
+          {
+            id: 2,
+            name: "Lavande",
+            description: "A vibrant and zesty aperitif with notes of blood orange and grapefruit.",
+            category: "Drinks",
+            imageUrl: "/product2.jpg",
+          },
+          {
+            id: 3,
+            name: "Spezia",
+            description: "A sophisticated and aromatic aperitif with notes of cardamom and clove.",
+            category: "Drinks",
+            imageUrl: "/product3.jpg",
+          },
+        ],
+      })
+    }, 500)
+  })
 }
 
-// Keeping getHomeHero for backward compatibility while transition happens, 
-// but mapping it to getHomeData's output
+// 🔹 Маппинг под Hero
 export const getHomeHero = async (): Promise<HomeHeroPayload> => {
   const data = await getHomeData()
-
-  if (!data) {
-    return {
-      promoTitle: 'THE ONLY SPIRIT-FREE APERITIF THAT TASTES AS GOOD AS IT MAKES YOU FEEL.',
-      promoButtonText: 'SHOP NOW',
-      promoButtonLink: '/stocklists',
-      promoImageUrl: '/bg_1.jpg',
-      description:
-        'VÉLOCE IS THE ZERO-PROOF APERITIF FOR MODERN LIVING, CRAFTED WITH SUPER HERBS AND NUTRACEUTICALS TO ELEVATE YOUR WELL-BEING, WITHOUT COMPROMISING THE SOPHISTICATED RITUAL OF THE APERITIF.',
-      aboutButtonText: 'ABOUT US',
-      aboutButtonLink: '/about',
-    }
-  }
 
   return {
     promoTitle: data.heroText,

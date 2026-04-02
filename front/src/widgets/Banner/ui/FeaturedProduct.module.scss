@@ -1,0 +1,63 @@
+.featured {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding: 0 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 600px) {
+            padding: 0 20px;
+        }
+    }
+
+    &__badge_wrapper {
+        position: absolute;
+        bottom: 100%;
+        left: 18%;
+
+        img {
+            width: clamp(80px, 12vw, 115px);
+            height: auto;
+        }
+    }
+
+    &__title {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: clamp(3rem, 15vw, 10rem);
+        line-height: 0.85;
+        letter-spacing: 0.01em;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-size: clamp(0.75rem, 3.5vw, 1.4rem);
+        text-transform: uppercase;
+        max-width: 100%;
+        letter-spacing: 0.05em;
+        margin: 0;
+        line-height: 1.3;
+        text-align: center;
+    }
+}

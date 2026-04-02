@@ -5,15 +5,30 @@ export interface Stockist {
   phone: string
 }
 
-const API_URL = 'http://localhost:8080/api'
 
-export const getStockists = async (): Promise<Stockist[] | null> => {
-  try {
-    const response = await fetch(`${API_URL}/stockists`)
-    if (!response.ok) return null
-    return await response.json()
-  } catch (error) {
-    console.error('Error fetching stockists data:', error)
-    return null
-  }
+export const getStockists = async (): Promise<Stockist[]> => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([
+        {
+          region: "USA",
+          companyName: "Veloce NY",
+          email: "ny@veloce.com",
+          phone: "+1 123 456 7890",
+        },
+        {
+          region: "UK",
+          companyName: "Veloce London",
+          email: "london@veloce.com",
+          phone: "+44 123 456 789",
+        },
+        {
+          region: "France",
+          companyName: "Veloce Paris",
+          email: "paris@veloce.com",
+          phone: "+33 123 456 789",
+        },
+      ])
+    }, 500)
+  })
 }

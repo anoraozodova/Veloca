@@ -33,7 +33,7 @@ export const HomeHero = () => {
     return null
   }
 
-  const { heroText, featuredProduct } = data
+  const { heroText, description } = data
 
   return (
     <section className={styles.hero}>
@@ -56,7 +56,7 @@ export const HomeHero = () => {
       </div>
       <div className={styles.hero__descr}>
         <div className="container">
-          <h3 className={styles.hero__descr__title}>{featuredProduct.description}</h3>
+          <h3 className={styles.hero__descr__title}>{description}</h3>
           <Link to="/about" className={styles.hero__about__btn}>
             ABOUT US
           </Link>

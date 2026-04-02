@@ -12,9 +12,15 @@
 }
 
 a {
-    text-decoration: none;
+    all: unset;
+
 }
 
-ul, li {
+ul,
+li {
     list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
 }

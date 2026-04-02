@@ -1,0 +1,126 @@
+.footer {
+    background-color: #cd9d65;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        &__info {
+            padding: 30px 0 120px 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            @media (max-width: 800px) {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 50px;
+            }
+
+            &__word,
+            &__number {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: clamp(1em, 2vw, 1.625em);
+                line-height: 139%;
+                letter-spacing: -0.01em;
+                text-transform: uppercase;
+                color: #000;
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+                width: 50%;
+
+                @media (max-width: 800px) {
+                    width: 100%;
+                    align-items: center;
+                }
+            }
+        }
+
+        &__logo {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: clamp(100px, 18.9vw, 240px);
+            line-height: 84%;
+            text-transform: uppercase;
+            text-decoration-skip-ink: none;
+            color: #0f0f0f;
+        }
+
+        &__text {
+            margin: 20px 0;
+            font-family: var(--third-family);
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 110%;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+            color: #0f0f0f;
+        }
+
+        &__deco {
+            width: 100%;
+            height: clamp(15px, 2.5vw, 33px);
+            overflow: hidden;
+            background-image: url('../../../assets/icons/deco_border.svg');
+            background-repeat: repeat-x;
+            background-position: left center;
+            background-size: auto 100%;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// &__deco {
+//     width: 100%; // Обязательно, чтобы блок растянулся
+//     height: clamp(15px, 2.5vw, 33px);
+//     margin-top: 30px;
+//     overflow: hidden;
+
+//     // Вместо тега img используем фон:
+//     background-image: url('../../../assets/icons/deco_border.svg');
+//     background-repeat: repeat-x; // Клонируем по горизонтали
+//     background-position: left center;
+
+//     // Подбери размер одного квадратика, чтобы он не растягивался
+//     // Например, если высота 20px, то и тут поставь высоту 20px
+//     background-size: auto 100%;
+// }
