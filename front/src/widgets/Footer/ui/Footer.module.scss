@@ -1,5 +1,14 @@
 .footer {
-    background-color: #cd9d65;
+    &--orange {
+        background-color: #cd9d65;
+        color: #000;
+    }
+
+    &--white {
+        background-color: #fff;
+        color: #000;
+    }
+
 
     &__content {
         display: flex;

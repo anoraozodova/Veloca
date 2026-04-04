@@ -61,9 +61,6 @@
             letter-spacing: 0.05em;
             white-space: nowrap;
 
-            &:hover {
-                opacity: 0.7;
-            }
         }
 
         &__text {
@@ -76,45 +73,24 @@
             }
         }
 
-        // &__deco {
-        //     // width: 100%;
-        //     overflow: hidden;
-        //     height: clamp(15px, 2.5vw, 33px);
-        //     display: flex;
-        //     margin-top: 30px;
-            
-        //     &_img {
-        //         background-repeat: repeat-x; // Повторять ТОЛЬКО по оси X
-        //         background-size: contain; // Или задай точный размер, например: 20px 10px;
-        //         background-position: top center;
-        //         // width: 100%;
-        //         // // height: 100%;
-        //         // object-fit: cover;
-        //         // display: block;
-        //     }
-        // }
-&__deco {
-    width: 100%; // Обязательно, чтобы блок растянулся
-    height: clamp(15px, 2.5vw, 33px);
-    margin-top: 30px;
-    overflow: hidden;
+        &__deco {
+            width: 100%;
+            height: clamp(15px, 2.5vw, 33px);
+            margin-top: 30px;
+            overflow: hidden;
 
-    // Вместо тега img используем фон:
-    background-image: url('../../../assets/icons/deco_border.svg'); 
-    background-repeat: repeat-x; // Клонируем по горизонтали
-    background-position: left center;
-    
-    // Подбери размер одного квадратика, чтобы он не растягивался
-    // Например, если высота 20px, то и тут поставь высоту 20px
-    background-size: auto 100%; 
-}
+            background-image: url('../../../assets/icons/deco_border.svg');
+            background-repeat: repeat-x;
+            background-position: left center;
+
+            background-size: auto 100%;
+        }
 
     }
 
     &__others {
-        padding: clamp(0.8rem, 1.2vw, 1.5rem) 0;
+        padding: 13px 0;
         background: #fff;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
         &__content {
             display: flex;
@@ -123,8 +99,14 @@
         }
 
         &__logo {
-            width: clamp(100px, 10vw, 140px);
-            height: auto;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: clamp(3.125em, 3.5vw, 3.375em);
+            line-height: 84%;
+            letter-spacing: -0.06em;
+            text-transform: uppercase;
+            text-decoration-skip-ink: none;
+            color: #0f0f0f;
 
             &_link {
                 display: block;
@@ -134,7 +116,7 @@
         &__links {
 
             display: flex;
-            gap: clamp(1.5rem, 2.5vw, 3.5rem);
+            gap: clamp(0.625em, 2vw, 1.625em);
             padding: 0;
             margin: 0;
             list-style: none;
@@ -146,15 +128,13 @@
         }
 
         &__link {
-            font-family: 'Staatliches', sans-serif;
-            font-size: clamp(0.9rem, 1.1vw, 1.3rem);
-            color: #000;
-            text-decoration: none;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: clamp(1em, 2vw, 1.625em);
+            line-height: 139%;
+            letter-spacing: -0.01em;
             text-transform: uppercase;
-
-            &:hover {
-                opacity: 0.7;
-            }
+            color: #000;
         }
     }
 }
@@ -262,12 +242,19 @@
     }
 
     .nav__others {
+        &__content {
+            align-items: flex-start;
+        }
+
         &__links {
-            gap: clamp(0.75rem, 2vw, 1.2rem);
+            flex-direction: column;
+            align-items: flex-end;
+            gap: clamp(0.5rem, 1.5vw, 1rem);
         }
 
         &__link {
-            font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            line-height: 1.5;
         }
     }
 }

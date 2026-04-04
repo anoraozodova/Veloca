@@ -1,0 +1,32 @@
+.AboutHero {
+    background: #000;
+    color: #fff;
+    padding: 50px 0 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.label {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: clamp(0.8125em, 1vw, 0.9375em);
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.title {
+    margin-top: 41px;
+    text-align: center;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: clamp(2.5em, 4vw, 3.75em);
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #fff;
+}

@@ -1,11 +1,13 @@
 import styles from './Footer.module.scss'
-import logo from '../../../assets/icons/logo.svg'
 
+interface FooterProps {
+    variant?: 'orange' | 'white'
+}
 
-export const Footer = () => {
+export const Footer = ({ variant = 'white' }: FooterProps) => {
     return (
         <footer>
-            <div className={styles.footer}>
+            <div className={`${styles.footer} ${variant === 'orange' ? styles['footer--orange'] : styles['footer--white']}`}>
                 <div className="container">
                     <div className={styles.footer__content}>
                         <div className={styles.footer__content__info}>

@@ -31,7 +31,7 @@ export const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li className={styles.nav__home__item}>
-                                    <Link to="/contact" className={styles.nav__home__link}>CONTACT</Link>
+                                    <a href="https://github.com/anoraozodova" target="_blank" rel="noopener noreferrer" className={styles.nav__home__link}>CONTACT</a>
                                 </li>
                             </ul>
                         </div>
@@ -48,7 +48,7 @@ export const Navbar = () => {
             <div className="container">
                 <div className={styles.nav__others__content}>
                     <Link to="/" className={styles.nav__others__logo_link}>
-                        <img src={logo} alt="Veloce Logo" className={styles.nav__others__logo} />
+                        <a href="#" className={styles.nav__others__logo}>Véloce</a>
                     </Link>
                     <ul className={styles.nav__others__links}>
                         <li className={styles.nav__others__item}>
@@ -58,7 +58,7 @@ export const Navbar = () => {
                             <Link to="/stocklists" className={styles.nav__others__link}>FIND US</Link>
                         </li>
                         <li className={styles.nav__others__item}>
-                            <Link to="/contact" className={styles.nav__others__link}>CONTACT</Link>
+                            <a href="https://github.com/anoraozodova" target="_blank" rel="noopener noreferrer" className={styles.nav__others__link}>CONTACT</a>
                         </li>
                     </ul>
                 </div>

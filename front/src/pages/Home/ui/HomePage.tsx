@@ -35,7 +35,7 @@ export const HomePage = () => {
       <FeaturedProduct product={featuredProduct} />
       <ProductList products={products} />
       <CollectionSlider featured={featuredProduct} collections={products} />
-      <Footer />
+      <Footer variant="orange" />
     </main>
   )
 }

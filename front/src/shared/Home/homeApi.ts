@@ -28,35 +28,35 @@ export const getHomeData = async (): Promise<HomeResponse> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
-        heroText: "The only SPIRIT-FREE aperitif that tastes as good as it makes you feel.",
-        description: "Mock description",
+        heroText: "data",
+        description: "data",
         featuredProduct: {
-          id: 1,
-          name: "Primavera",
-          description: "A delicate and floral aperitif with notes of lavender and chamomile.",
-          category: "Drinks",
+          id: 0,
+          name: "data",
+          description: "data",
+          category: "data",
           imageUrl: "/bg_1.jpg",
         },
         products: [
           {
-            id: 1,
-            name: "Veloce Classic",
-            description: "A delicate and floral aperitif with notes of lavender and chamomile.",
-            category: "Drinks",
+            id: 0,
+            name: "data",
+            description: "data",
+            category: "data",
             imageUrl: "/product1.jpg",
           },
           {
-            id: 2,
-            name: "Lavande",
-            description: "A vibrant and zesty aperitif with notes of blood orange and grapefruit.",
-            category: "Drinks",
+            id: 0,
+            name: "data",
+            description: "data",
+            category: "data",
             imageUrl: "/product2.jpg",
           },
           {
-            id: 3,
-            name: "Spezia",
-            description: "A sophisticated and aromatic aperitif with notes of cardamom and clove.",
-            category: "Drinks",
+            id: 0,
+            name: "data",
+            description: "data",
+            category: "data",
             imageUrl: "/product3.jpg",
           },
         ],
@@ -71,11 +71,11 @@ export const getHomeHero = async (): Promise<HomeHeroPayload> => {
 
   return {
     promoTitle: data.heroText,
-    promoButtonText: 'SHOP NOW',
+    promoButtonText: 'ТУТ ДОЛЖЕН БЫТЬ ТЕКСТ',
     promoButtonLink: '/stocklists',
     promoImageUrl: data.featuredProduct.imageUrl,
     description: data.featuredProduct.description,
-    aboutButtonText: 'ABOUT US',
+    aboutButtonText: 'ТУТ ДОЛЖЕН БЫТЬ ТЕКСТ',
     aboutButtonLink: '/about',
   }
 }
