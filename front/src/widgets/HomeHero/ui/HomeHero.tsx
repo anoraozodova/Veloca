@@ -39,7 +39,7 @@ export const HomeHero = () => {
     <section className={styles.hero}>
       <div className={styles.hero__visual}>
         {/* We use /bg_1.jpg here directly as the backend doesn't provide a hero cover image */}
-        <img src="/bg_1.jpg" className={styles.hero__background} alt="Hero Background" />
+        <img src="/images/bg_1.jpg" className={styles.hero__background} alt="Hero Background" />
 
         {/* Оранжевый блок — от края экрана до 40% */}
         <div className={styles.hero__panel}>

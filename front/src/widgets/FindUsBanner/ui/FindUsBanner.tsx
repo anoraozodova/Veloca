@@ -4,15 +4,19 @@ import { getStockists, type Stockist } from '../../../shared/Home/stockistsApi';
 
 export const FindUsBanner = () => {
     const [stockists, setStockists] = useState<Stockist[]>([]);
+    const [bgImage, setBgImage] = useState<string>('');
 
     useEffect(() => {
-        getStockists().then((data) => setStockists(data));
+        getStockists().then((data) => {
+            setStockists(data.stockists);
+            setBgImage(data.backgroundImage);
+        });
     }, []);
 
     return (
         <section className={styles.banner}>
             {/* The fixed background image */}
-            <div className={styles.bgImage}></div>
+            <div className={styles.bgImage} style={{ backgroundImage: `url(${bgImage})` }}></div>
 
             <div className={styles.content}>
                 <h4 className={styles.title}>OUR STOCK LISTS</h4>

@@ -51,7 +51,7 @@ export const CollectionSlider: React.FC<CollectionSliderProps> = ({
     id: 'find_us',
     name: 'FIND US',
     description: 'EXPERIENCE THE REFINED TASTE OF VÉLOCE. VISIT OUR PREMIUM STOCKISTS FOR YOUR NEXT ALCOHOL-FREE APERITIF.',
-    imageUrl: '/bg_3.jpg'
+    imageUrl: '/images/bg_3.jpg'
   }
 
   // Общий тип для активного контента (продукт или FIND US)
@@ -103,7 +103,6 @@ export const CollectionSlider: React.FC<CollectionSliderProps> = ({
             ))}
           </div>
         </div>
-        {/* </div> */}
       </div>
 
       {/* ── Блок 2: Контент (Светлый) — стык в стык ── */}
