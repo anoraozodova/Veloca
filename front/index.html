@@ -1,13 +1,89 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Основное -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>veloce</title>
+
+    <!-- Title + Description -->
+    <title>Veloce — Fast & Modern Web Solutions</title>
+    <meta
+      name="description"
+      content="Veloce — fast, modern and scalable web solutions. We build high-performance applications, landing pages and digital products."
+    />
+
+    <!-- Keywords (не сильно влияет, но пусть будет) -->
+    <meta
+      name="keywords"
+      content="veloce, web development, frontend, backend, react, fast websites, landing pages"
+    />
+
+    <!-- Автор -->
+    <meta name="author" content="Veloce Team" />
+
+    <!-- Индексация -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://veloce.uz/" />
+
+    <!-- Open Graph (Facebook, LinkedIn и т.д.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Veloce — Fast Web Solutions" />
+    <meta
+      property="og:description"
+      content="We create fast, scalable and modern web applications."
+    />
+    <meta property="og:url" content="https://veloce.uz/" />
+    <meta property="og:image" content="https://veloce.uz/preview.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Veloce — Fast Web Solutions" />
+    <meta
+      name="twitter:description"
+      content="High-performance websites and applications."
+    />
+    <meta name="twitter:image" content="https://veloce.uz/preview.png" />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Preconnect (ускорение загрузки) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Veloce",
+        "url": "https://veloce.uz/",
+        "logo": "https://veloce.uz/logo.png",
+        "sameAs": [
+          "https://instagram.com/veloce",
+          "https://t.me/veloce"
+        ]
+      }
+    </script>
   </head>
+
   <body>
+    <!-- SEO fallback -->
+    <noscript>
+      <h1>Veloce — Fast Web Development</h1>
+      <p>
+        We build fast, modern and scalable web applications and landing pages.
+      </p>
+    </noscript>
+
     <div id="root"></div>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
